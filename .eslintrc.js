@@ -25,6 +25,7 @@ module.exports = {
   settings: {
     react: {
       version: 'detect',
+      '@typescript-eslint/no-explicit-any': 'off', // 关闭 any 报错
     },
   },
 };
