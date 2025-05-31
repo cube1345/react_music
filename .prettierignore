@@ -1,0 +1,36 @@
+# 依赖目录
+node_modules
+dist
+build
+
+# 日志文件
+*.log
+
+# 本地环境文件
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 编辑器配置文件
+.idea
+.vscode
+
+# 构建输出
+coverage
+lib
+es
+
+# 包管理器的锁定文件
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# 缓存目录
+.cache
+.temp
+
+# 其他不需要格式化的文件
+*.min.js
+*.min.css
+*.d.ts
