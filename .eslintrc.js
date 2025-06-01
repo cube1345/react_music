@@ -26,8 +26,11 @@ module.exports = {
     react: {
       version: 'detect',
       '@typescript-eslint/no-explicit-any': 'off', // 关闭 any 报错
-       "no-unused-vars": "off", // 禁用规则
-       "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }]
+      'no-unused-vars': 'off', // 禁用规则
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        { argsIgnorePattern: '^_' },
+      ],
     },
   },
 };

@@ -1,7 +1,6 @@
-import type { RouteObject } from "react-router-dom";
-import { Navigate } from "react-router-dom";
-import React, { lazy } from "react";
-
+import type { RouteObject } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
+import React, { lazy } from 'react';
 
 /* import Download from "@/pages/download";
 import Focus from "@/pages/focus";
@@ -22,56 +21,54 @@ const Songs = lazy(() => import('@/pages/discover/child-views/songs'));
 const routes: RouteObject[] = [
   {
     path: '/',
-    element: <Navigate to="discover"/>
+    element: <Navigate to="discover" />,
   },
   {
-    path:'/discover',
-    element:<Discover />,
+    path: '/discover',
+    element: <Discover />,
     children: [
       {
         path: '/discover',
-        element: <Navigate to='/discover/recommend' />
+        element: <Navigate to="/discover/recommend" />,
       },
       {
         path: '/discover/recommend',
-        element: <Recommend />
+        element: <Recommend />,
       },
       {
         path: '/discover/album',
-        element: <Album />
+        element: <Album />,
       },
       {
         path: '/discover/artist',
-        element: <Artist />
+        element: <Artist />,
       },
       {
         path: '/discover/djradio',
-        element: <Djradio />
+        element: <Djradio />,
       },
       {
         path: '/discover/ranking',
-        element: <Ranking />
+        element: <Ranking />,
       },
       {
         path: '/discover/songs',
-        element: <Songs />
-      }
-    ]
+        element: <Songs />,
+      },
+    ],
   },
   {
-    path:'/download',
-    element:<Download />
+    path: '/download',
+    element: <Download />,
   },
   {
     path: '/focus',
-    element:<Focus />
+    element: <Focus />,
   },
   {
     path: '/mine',
-    element:<Mine />
-  }
+    element: <Mine />,
+  },
 ];
 
-
 export default routes;
-

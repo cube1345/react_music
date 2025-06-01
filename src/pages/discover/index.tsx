@@ -1,9 +1,7 @@
-
 import React, { Suspense } from 'react';
-import { Outlet , Link} from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
 const Discover = () => {
-
-  return(
+  return (
     <>
       <div>
         <Link to="/discover/recommend">推荐</Link>
@@ -14,10 +12,10 @@ const Discover = () => {
         <Link to="/discover/songs">歌单</Link>
       </div>
       <Suspense fallback={<div>Loading...</div>}>
-       <Outlet />
+        <Outlet />
       </Suspense>
     </>
   );
-}
+};
 
 export default Discover;

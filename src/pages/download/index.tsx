@@ -12,4 +12,3 @@ const Download: FC<DownloadProps> = () => {
   );
 };
 export default memo(Download);
-
