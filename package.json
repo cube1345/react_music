@@ -11,11 +11,13 @@
     "prettier": "prettier --write ."
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.8.2",
     "antd": "^5.25.3",
     "craco-less": "2.1.0-alpha.0",
     "normalize.css": "^8.0.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-redux": "^9.2.0",
     "react-router-dom": "^7.6.1"
   },
   "devDependencies": {
