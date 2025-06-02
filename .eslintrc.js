@@ -2,13 +2,13 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true, // 添加 node 环境
+    node: true,
   },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended', // 添加 prettier 插件
+    'plugin:prettier/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -20,17 +20,15 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint'],
   rules: {
-    '@typescript-eslint/no-var-requires': 'off', // 关闭 require 报错
+    '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/no-explicit-any': 'off', // 将规则移到这里
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': 'warn',
+    'react/react-in-jsx-scope': 'off', // 关闭需要导入 React 的规则
   },
   settings: {
     react: {
       version: 'detect',
-      '@typescript-eslint/no-explicit-any': 'off', // 关闭 any 报错
-      'no-unused-vars': 'off', // 禁用规则
-      '@typescript-eslint/no-unused-vars': [
-        'warn',
-        { argsIgnorePattern: '^_' },
-      ],
     },
   },
 };

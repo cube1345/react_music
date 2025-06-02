@@ -1,4 +1,5 @@
-import React, { Suspense } from 'react';
+import React from 'react';
+import { Suspense } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 const Discover = () => {
   return (

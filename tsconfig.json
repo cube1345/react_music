@@ -1,4 +1,8 @@
 {
+  "compilerOptions": {
+    "jsx": "react-jsx", // 使用新的 JSX 转换
+    "noImplicitReturns": false
+  },
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },

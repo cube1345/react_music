@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link, useRoutes } from 'react-router-dom';
 import routes from '@/router';
 import '@/assets/css/index.less';

@@ -1,6 +1,6 @@
 import type { RouteObject } from 'react-router-dom';
 import { Navigate } from 'react-router-dom';
-import React, { lazy } from 'react';
+import { lazy } from 'react';
 
 /* import Download from "@/pages/download";
 import Focus from "@/pages/focus";
