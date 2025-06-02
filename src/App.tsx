@@ -2,7 +2,7 @@ import { Link, useRoutes } from 'react-router-dom';
 import routes from '@/router';
 import '@/assets/css/index.less';
 import 'normalize.css';
-import { Suspense } from 'react';
+import React , { Suspense } from 'react';
 import { useAppSelector, useAppDispatch, shallowEqualApp } from './store';
 import { changeMessageAction } from './store/modules';
 
@@ -31,9 +31,8 @@ function App() {
 
   return (
     <>
-      <div>count:{count}</div>
-      <div>message:{message}</div>
-      <button onClick={changeMessageHandler}>修改message</button>
+
+
       <div className="nav">
         <Link to="/discover">发现</Link>
         <Link to="/download">下载</Link>
@@ -43,6 +42,9 @@ function App() {
       <Suspense fallback={<div>Loading...</div>}>
         <div className="main">{useRoutes(routes)}</div>
       </Suspense>
+      <div>count:{count}</div>
+      <div>message:{message}</div>
+      <button onClick={changeMessageHandler}>修改message</button>
     </>
   );
 }
