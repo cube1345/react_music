@@ -4,8 +4,7 @@ import styled from 'styled-components';
 export const HeaderWrapper = styled.div`
   height: 60px;
   background-color: #333333;
-  display: flex;  // 添加flex布局
-  justify-content: space-between;  // 左右两侧分布
+  display: flex;
   justify-content: space-between;
   padding-right: 20px;
 `;
@@ -31,15 +30,15 @@ export const HeaderLeft = styled.div`
   .content {
     color: white;
     display: flex;
-    margin-left: 20px;  // 添加左边距,与logo保持间距
-    align-items: center; //使文字在容器高度上垂直居中
+    margin-left: 20px;
+    align-items: center;
     height:100%;
 
     /* React的link标签会被渲染成HTML的a标签 */
     a {
       color: #CCCCCC;
       text-decoration: none;
-      padding: 0 30px;
+      padding: 0 15px;
       height: 100%;
       line-height: 60px;
       font-size: 20px;
@@ -83,21 +82,15 @@ export const HeaderRight = styled.div`
       &:focus {
         outline: none;
       }
-
-  .ant-btn {
-    background-color: transparent;  // 背景透明
-    border: 1px solid #fff;        // 白色边框
-    color: #fff;                   // 白色文字
-    border-radius: 20px;           // 圆角边框
-    padding: 0 20px;               // 内边距
-    height: 32px;                  // 高度
-    font-size: 12px;              // 字体大小
-
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.1);  // 悬停时半透明背景
-      border-color: #fff;
-      color: #fff;
-    }
   }
+
+    .ant-btn {
+      color: #fff;
+      border: none;
+      height: 32px;
+      padding: 0 16px;
+
+    }
+
 
 `;
