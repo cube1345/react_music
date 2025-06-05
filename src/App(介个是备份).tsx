@@ -1,8 +1,6 @@
-import React , { Suspense } from 'react';
+import React, { Suspense } from 'react';
 import { useRoutes } from 'react-router-dom';
 import routes from '@/router';
-
-
 
 import '@/assets/css/index.less';
 import 'normalize.css';
@@ -42,7 +40,6 @@ function App() {
         <div className="main">{useRoutes(routes)}</div>
       </Suspense>
       <AppFooter />
-
 
       <div>count:{count}</div>
       <div>message:{message}</div>

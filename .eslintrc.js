@@ -24,7 +24,7 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'off',
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'warn',
-    'react/react-in-jsx-scope': 'off', // 关闭需要导入 React 
+    'react/react-in-jsx-scope': 'off', // 关闭需要导入 React
   },
   settings: {
     react: {

@@ -1,6 +1,6 @@
 import type { RouteObject } from 'react-router-dom';
 import { Navigate } from 'react-router-dom';
-import React , { lazy } from 'react';
+import React, { lazy } from 'react';
 
 /* import Download from "@/pages/download";
 import Focus from "@/pages/focus";
@@ -9,7 +9,7 @@ import Discover from "@/pages/discover"; */
 
 const Download = lazy(() => import('@/pages/download'));
 const Focus = lazy(() => import('@/pages/focus'));
-const Mine = lazy(() => import('@/pages/discover/child-views/mine'));
+const Mine = lazy(() => import('@/pages/mine'));
 const Discover = lazy(() => import('@/pages/discover'));
 const Recommend = lazy(() => import('@/pages/discover/child-views/recommend'));
 const Album = lazy(() => import('@/pages/discover/child-views/album'));

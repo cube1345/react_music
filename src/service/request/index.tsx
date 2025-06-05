@@ -12,11 +12,11 @@ class HYRequest {
 
     // 添加请求拦截器
     this.instance.interceptors.request.use(
-      (config) => {
+      config => {
         // 在发送请求之前做些什么
         return config;
       },
-      (error) => {
+      error => {
         // 对请求错误做些什么
         return Promise.reject(error);
       }
@@ -24,11 +24,11 @@ class HYRequest {
 
     // 添加响应拦截器
     this.instance.interceptors.response.use(
-      (response) => {
+      response => {
         // 对响应数据做点什么
         return response.data;
       },
-      (error) => {
+      error => {
         // 对响应错误做点什么
         return Promise.reject(error);
       }
@@ -37,29 +37,31 @@ class HYRequest {
     // 添加自定义拦截器
     this.instance.interceptors.request.use(
       config.interceptors?.requestSuccessFn,
-      config.interceptors?.requestFailureFn,
+      config.interceptors?.requestFailureFn
     );
     this.instance.interceptors.response.use(
       config.interceptors?.responseSuccessFn,
-      config.interceptors?.responseFailureFn,
+      config.interceptors?.responseFailureFn
     );
   }
 
   request<T = any>(config: HYRequestConfig<T>) {
     if (config.interceptors?.requestSuccessFn) {
-      config = config.interceptors.requestSuccessFn(config as InternalAxiosRequestConfig);
+      config = config.interceptors.requestSuccessFn(
+        config as InternalAxiosRequestConfig
+      );
     }
 
     return new Promise<T>((resolve, reject) => {
       this.instance
         .request<any, T>(config)
-        .then((res) => {
+        .then(res => {
           if (config.interceptors?.responseSuccessFn) {
             res = config.interceptors.responseSuccessFn(res);
           }
           resolve(res);
         })
-        .catch((err) => {
+        .catch(err => {
           reject(err);
         });
     });
@@ -83,4 +85,3 @@ class HYRequest {
 }
 
 export default HYRequest;
-

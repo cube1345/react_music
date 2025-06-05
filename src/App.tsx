@@ -1,8 +1,6 @@
-import React , { Suspense } from 'react';
+import React, { Suspense } from 'react';
 import { useRoutes } from 'react-router-dom';
 import routes from '@/router';
-
-
 
 import '@/assets/css/index.less';
 import 'normalize.css';
@@ -10,10 +8,7 @@ import 'normalize.css';
 import AppFooter from './components/app-footer';
 import AppHeader from './components/app-header';
 
-
 function App() {
-
-
   return (
     <>
       <AppHeader />
@@ -21,7 +16,6 @@ function App() {
         <div className="main">{useRoutes(routes)}</div>
       </Suspense>
       <AppFooter />
-
     </>
   );
 }

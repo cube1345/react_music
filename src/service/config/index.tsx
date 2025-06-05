@@ -1,5 +1,4 @@
-
-console.log('当前环境:', import.meta.env);// 输出当前环境变量
+console.log('当前环境:', import.meta.env); // 输出当前环境变量
 //1.区分开发环境和生产环境
 export const BASE_URL = 'http://codercba.dev:9002';
 // export const BASE_URL = 'http://codercba.prod:9002'
@@ -37,7 +36,3 @@ if (import.meta.env.MODE === 'development') {
 }
 
 export { BASE_URL }; */
-
-
-
-

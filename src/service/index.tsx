@@ -1,7 +1,7 @@
 import { BASE_URL, TIME_OUT } from './config';
 import HYRequest from './request';
 import type { InternalAxiosRequestConfig } from 'axios';
-import  { AxiosHeaders } from 'axios';
+import { AxiosHeaders } from 'axios';
 
 const hyRequest = new HYRequest({
   baseURL: BASE_URL,
@@ -10,8 +10,8 @@ const hyRequest = new HYRequest({
   interceptors: {
     requestSuccessFn: (config: InternalAxiosRequestConfig) => {
       return config;
-    }
-  }
+    },
+  },
 });
 
 export default hyRequest;

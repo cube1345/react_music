@@ -17,7 +17,7 @@ const AppHeader: FC<DownloadProps> = () => {
           <a className="logo">
             <img src="src\assets\img\logo.jpg" alt="logo" />
           </a>
-          <div className='content wrap-header'>
+          <div className="content wrap-header">
             <Link to="/discover">发现</Link>
             <Link to="/download">下载</Link>
             <Link to="/focus">关注</Link>
@@ -27,11 +27,12 @@ const AppHeader: FC<DownloadProps> = () => {
           </div>
         </HeaderLeft>
         <HeaderRight>
-
-          <Input    placeholder='Lemon（中文版） --时代少年团' prefix= {<SearchOutlined />} />
-          <Button type='link'>创作者中心</Button>
+          <Input
+            placeholder="Lemon（中文版） --时代少年团"
+            prefix={<SearchOutlined />}
+          />
+          <Button type="link">创作者中心</Button>
         </HeaderRight>
-
       </HeaderWrapper>
     </>
   );
