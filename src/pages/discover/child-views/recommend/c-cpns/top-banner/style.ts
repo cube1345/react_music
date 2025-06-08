@@ -98,7 +98,7 @@ export const BannerControl = styled.div`
   }
 
   .left {
-    left: calc(50% - 614px);
+    left: calc(50% - 540px);
   }
 
   .right {
