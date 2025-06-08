@@ -1,46 +1,73 @@
-import React, { memo } from 'react';
+import React, { memo, useRef, useState } from 'react';
 import type { FC, ReactNode } from 'react';
-import { shallowEqualApp, useAppSelector } from '@/store';
-import { useAppDispatch } from '@/store';
-import { useEffect } from 'react';
-import { fetchBannerDataAction } from '../../store/recommend';
+import { BannerControl, BannerLeft, BannerRight, ContainerWrapper, BannerBg, BannerContent } from './style';
+import { Carousel } from 'antd';
+import type { CarouselRef } from 'antd/es/carousel';
 
 interface DownloadProps {
   children?: ReactNode;
 }
 
-
-
 const TopBanner: FC<DownloadProps> = () => {
-  // 获取dispatch
-  const dispatch = useAppDispatch()
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const bannerRef = useRef<CarouselRef>(null);
+  
+  const handleBeforeChange = (from: number, to: number) => {
+    setCurrentIndex(to);
+  };
 
-  // 发起网络请求
-  useEffect(() => {
-    dispatch(fetchBannerDataAction())
-  }, [])
+  function handlePrevClick() {
+    bannerRef.current?.prev();
+  }
 
-  // 从store获取数据
-  const { banners } = useAppSelector(
-    (state) => ({
-      banners: state.reducer.banners // 注意这里的路径
-    }),
-    shallowEqualApp
-  )
+  function handleNextClick() {
+    bannerRef.current?.next();
+  }
 
   return (
     <>
-      <div>
-        {banners.map(((item) => {
-            return(
-              <div key={item.imageUrl}>
-                {
-                  item.imageUrl
-                }
+    <ContainerWrapper>
+      <BannerBg>
+        <div
+          className="bg-image"
+          style={{
+            backgroundImage: `url(/src/assets/img/top-bgimg${currentIndex + 1}.jpg)`
+          }}
+        />
+      </BannerBg>
+
+      <BannerContent>
+        <BannerLeft>
+          <Carousel
+            autoplay
+            autoplaySpeed={1500}
+            effect="fade"
+            ref={bannerRef}
+            beforeChange={handleBeforeChange}
+          >
+            {[...Array(8)].map((_, index) => (
+              <div key={index} className="banner-item">
+                <img
+                  className="banner-img"
+                  src={`/src/assets/img/top-img${index + 1}.jpg`}
+                  alt="banner"
+                />
               </div>
-            )
-        }))}
-      </div>
+            ))}
+          </Carousel>
+        </BannerLeft>
+        <BannerRight>
+          <div className='img-container'>
+            <img src='src\assets\img\top-right-img.jpg' alt='密码的我图呢？'></img>
+            <div className='img-text'>时代少年团，我们喜欢你~</div>
+          </div>
+        </BannerRight>
+        <BannerControl>
+          <button className='btn left' onClick={handlePrevClick}>&lt;</button>
+          <button className='btn right' onClick={handleNextClick}>&gt;</button>
+        </BannerControl>
+        </BannerContent>
+      </ContainerWrapper>
     </>
   );
 };

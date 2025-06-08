@@ -10,7 +10,7 @@ export const fetchBannerDataAction = createAsyncThunk(
 );
 
 interface IRecommendState {
-  banners: any[];
+  banners: [];
 }
 
 const initialState: IRecommendState = {
@@ -26,8 +26,8 @@ const recommendSlice = createSlice({
       .addCase(fetchBannerDataAction.pending, () => {
         console.log("pending");
       })
-      .addCase(fetchBannerDataAction.fulfilled, (state, {payload} ) => {
-        state.banners = payload;
+      .addCase(fetchBannerDataAction.fulfilled, () => {
+        // state.banners = payload;
       })
       .addCase(fetchBannerDataAction.rejected, () => {
         console.log('rejected');
