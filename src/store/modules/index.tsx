@@ -8,7 +8,6 @@ const counterReducer = createSlice({
     message: 'Welcome to the Redux Toolkit',
   },
   reducers: {
-    /* 存放对应修改函数 */
     changeMessageAction(state, { payload }) {
       state.message = payload; // 修改message
     },

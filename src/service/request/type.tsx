@@ -1,16 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import type { InternalAxiosRequestConfig, AxiosResponse } from 'axios';
+import type { AxiosRequestConfig, AxiosResponse } from 'axios';
 
-export interface HYInterceptors<T = AxiosResponse> {
-  requestSuccessFn?: (
-    config: InternalAxiosRequestConfig
-  ) => InternalAxiosRequestConfig;
-  requestFailureFn?: (error: any) => any;
-  responseSuccessFn?: (response: T) => T;
-  responseFailureFn?: (error: any) => any;
+// 修改接口定义，删除必需的 headers
+interface HYRequestConfig<T = AxiosResponse> extends AxiosRequestConfig {
+  interceptors?: {
+    requestSuccessFn?: (config: any) => any;
+    requestFailureFn?: (err: any) => any;
+    responseSuccessFn?: (res: T) => T;
+    responseFailureFn?: (err: any) => any;
+  };
 }
 
-export interface HYRequestConfig<T = AxiosResponse>
-  extends InternalAxiosRequestConfig {
-  interceptors?: HYInterceptors<T>;
-}
+export type { HYRequestConfig };

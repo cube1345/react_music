@@ -1,0 +1,50 @@
+[
+  {
+    "key": 1,
+    "url": "/src/assets/img/recommend1.jpg",
+    "text": "【怀疑耳机坏了系列】耳机你对耳朵做了什么",
+    "link": "https://music.163.com/#/playlist?id=442538213"
+  },
+  {
+    "key": 2,
+    "url": "/src/assets/img/recommend2.jpg",
+    "text": "歌词唱透了心声，回忆模糊了眼眸",
+    "link": "https://music.163.com/#/playlist?id=158010361"
+  },
+  {
+    "key": 3,
+    "url": "/src/assets/img/recommend3.jpg",
+    "text": "华语青春 | 90后校园岁月的流行歌曲",
+    "link": "https://music.163.com/#/playlist?id=123816281"
+  },
+  {
+    "key": 4,
+    "url": "/src/assets/img/recommend4.jpg",
+    "text": "【新说唱repo】Yamy的《0763》为何最亮眼？浅谈嘻哈文...",
+    "link": "https://music.163.com/#/dj?id=3078541607"
+  },
+  {
+    "key": 5,
+    "url": "/src/assets/img/recommend5.jpg",
+    "text": "此刻，二郎神比孙悟空厉害，如来佛祖是孙悟空的师父，...",
+    "link": "https://music.163.com/#/playlist?id=737535139"
+  },
+  {
+    "key": 6,
+    "url": "/src/assets/img/recommend6.jpg",
+    "text": "温柔儿歌-睡觉专用",
+    "link": "https://music.163.com/#/dj?id=3078501968"
+  },
+  {
+    "key": 7,
+    "url": "/src/assets/img/recommend7.jpg",
+    "text": "超火rap|一定要听的顶级说唱",
+    "link": "https://music.163.com/#/playlist?id=8510516438"
+  },
+  {
+    "key": 8,
+    "url": "/src/assets/img/recommend8.jpg",
+    "text": "云裳羽衣曲-周深",
+    "link": "https://music.163.com/#/dj?id=3078177406"
+  }
+]

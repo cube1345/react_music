@@ -11,7 +11,7 @@ interface DownloadProps {
 const TopBanner: FC<DownloadProps> = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const bannerRef = useRef<CarouselRef>(null);
-  
+
   const handleBeforeChange = (from: number, to: number) => {
     setCurrentIndex(to);
   };

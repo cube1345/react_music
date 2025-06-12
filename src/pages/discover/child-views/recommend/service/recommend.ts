@@ -1,21 +1,21 @@
 import hyRequest from '@/service'
 
-interface BannerData {
-  banners: {
-    imageUrl: string
-    targetId: number
-    targetType: number
-    titleColor: string
-    typeTitle: string
-    url: string
-    [key: string]: any
-  }[]
-  code: number
-}
+
 
 export function getBanners() {
-  return hyRequest.get<BannerData>({
+  return hyRequest.get({
     url: '/banner',
-    headers,
+  })
+}
+
+export function getHotRecommend(limit = 30) {
+  return hyRequest.get({
+    url: '/personalized',
+    params: {
+      limit
+    }
+  }).catch(error => {
+    console.error('获取热门推荐失败:', error)
+    throw error
   })
 }

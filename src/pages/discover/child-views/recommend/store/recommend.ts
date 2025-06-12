@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { getBanners } from '../service/recommend';
+import { getBanners, getHotRecommend } from '../service/recommend';
 
 export const fetchBannerDataAction = createAsyncThunk(
   'recommend/banners',
@@ -9,18 +10,35 @@ export const fetchBannerDataAction = createAsyncThunk(
   }
 );
 
+export const fetchHotRecommendAction = createAsyncThunk(
+  'hotRecommend',
+  async (arg , {dispatch}) => {
+    const res = await getHotRecommend(8)
+    dispatch(changeHotRecommendAction(res.result))
+    // console.log(res);
+
+  }
+)
+
 interface IRecommendState {
-  banners: [];
+  banners: any[];
+  hotRecommend: any[];
 }
 
 const initialState: IRecommendState = {
   banners: [],
+  hotRecommend: []
 };
 
 const recommendSlice = createSlice({
   name: 'recommend',
   initialState,
-  reducers: {},
+  reducers: {
+    changeHotRecommendAction(state,{ payload }) {
+      state.banners = payload
+    }
+
+  },
   extraReducers: builder => {
     builder
       .addCase(fetchBannerDataAction.pending, () => {
@@ -35,4 +53,5 @@ const recommendSlice = createSlice({
   },
 });
 
+export const {changeHotRecommendAction} = recommendSlice.actions
 export default recommendSlice.reducer;
