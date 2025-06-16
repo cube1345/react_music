@@ -4,6 +4,7 @@ import type { FC, ReactNode } from 'react';
 import { AlbumWrapper } from './style';
 import { Carousel } from 'antd';
 import type { CarouselRef } from 'antd/es/carousel';
+import AlbumData from '@/assets/data/new_album.json'
 
 interface DownloadProps {
   children?: ReactNode;
@@ -27,7 +28,19 @@ const NewAlbum: FC<DownloadProps> = () => {
           <button className='arrow-left' onClick={handlePreClick}>&lt;</button>
           <div className="banner">
             <Carousel ref={bannerRef} dots={false} speed={1000}>
-
+              {AlbumData.map(item => (
+                <div key={item.key} className="album-item">
+                    <div className="album-image-wrapper">
+                      <img
+                        className="newalbum-image"
+                        src={item.url}
+                        alt={item.name}
+                      />
+                    </div>
+                    <link className="name-link">{item.namelink}</link>
+                    <link className="singer-link">{item.singerlink}</link>
+                </div>
+              ))}
             </Carousel>
           </div>
           <button className='arrow-right' onClick={handleNextClick}>&gt;</button>

@@ -1,0 +1,82 @@
+[
+  {
+    "key": 1,
+    "url": "/src/assets/img/NewAlbum1.jpg",
+    "name":"Something Beautifu",
+    "singer":"Miley Cyrus",
+    "namelink":"https://music.163.com/#/album?id=273402945",
+    "singerlink": "https://music.163.com/#/artist?id=66361"
+  },
+  {
+    "key": 2,
+    "url": "/src/assets/img/NewAlbum2.jpg",
+    "name":"我爱我 A Love Lett",
+    "singer":"陈昊宇",
+    "namelink":"https://music.163.com/#/album?id=273225204",
+    "singerlink": "https://music.163.com/#/artist?id=27692716"
+  },
+  {
+    "key": 3,
+    "url": "/src/assets/img/NewAlbum3.jpg",
+    "name":"꽃갈피 셋",
+    "singer":"IU",
+    "namelink":"https://music.163.com/#/album?id=272648305",
+    "singerlink": "https://music.163.com/#/artist?id=160947"
+  },
+  {
+    "key": 4,
+    "url": "/src/assets/img/NewAlbum4.jpg",
+    "name":"ADHD",
+    "singer":"KAFE_HU咖啡胡",
+    "namelink":"https://music.163.com/#/album?id=272648328",
+    "singerlink": "https://music.163.com/#/artist?id=12024274"
+  },
+  {
+    "key": 5,
+    "url": "/src/assets/img/NewAlbum5.jpg",
+    "name":"BEDROOM TAPE",
+    "singer":"马伯骞Victor Ma",
+    "namelink":"https://music.163.com/#/album?id=272136228",
+    "singerlink": "https://music.163.com/#/artist?id=12914544"
+  },
+  {
+    "key":6,
+    "url": "/src/assets/img/NewAlbum6.jpg",
+    "name":"Seasons",
+    "singer":"鹿晗",
+    "namelink":"https://music.163.com/#/album?id=274252578",
+    "singerlink": "https://music.163.com/#/artist?id=1038093"
+  },
+  {
+    "key":7,
+    "url": "/src/assets/img/NewAlbum7.jpg",
+    "name":"罗刹国纪·山之篇",
+    "singer":"上海彩虹室内合",
+    "namelink":"https://music.163.com/#/album?id=274588343",
+    "singerlink": "https://music.163.com/#/artist?id=1199126"
+  },
+  {
+    "key":8,
+    "url": "/src/assets/img/NewAlbum8.jpg",
+    "name":"I AM GLORIA",
+    "singer":"G.E.M.邓紫棋",
+    "namelink":"https://music.163.com/#/album?id=274821019",
+    "singerlink": "https://music.163.com/#/artist?id=7763"
+  },
+  {
+    "key":9,
+    "url": "/src/assets/img/NewAlbum9.jpg",
+    "name":"224",
+    "singer":"KISS OF LIFE",
+    "namelink":"https://music.163.com/#/album?id=272768768",
+    "singerlink": "https://music.163.com/#/artist?id=57446856"
+  },
+  {
+    "key":10,
+    "url": "/src/assets/img/NewAlbum10.jpg",
+    "name":"完整的大人",
+    "singer":"彭佳慧",
+    "namelink":"https://music.163.com/#/album?id=272375878",
+    "singerlink": "https://music.163.com/#/artist?id=9102"
+  }
+]
