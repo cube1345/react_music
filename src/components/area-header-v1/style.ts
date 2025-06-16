@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const HeaderV1Wrapper = styled.div`
   height: 33px;

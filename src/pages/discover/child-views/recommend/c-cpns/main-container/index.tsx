@@ -1,8 +1,9 @@
 import React, { memo } from 'react';
 import type { FC, ReactNode } from 'react';
-import { RecommendWrapper} from './style';
+import { RecommendWrapper } from './style';
 import HotRecommend from '../hot-recommend';
 import SongsItems from '../songs-items';
+import Newalbum from '../newalbum';
 
 interface DownloadProps {
   children?: ReactNode;
@@ -10,17 +11,16 @@ interface DownloadProps {
 const MainContainer: FC<DownloadProps> = () => {
   return (
     <>
-    <RecommendWrapper>
-      <div className='container wrap-h2'>
-          <div className='left'>
+      <RecommendWrapper>
+        <div className="container wrap-h2">
+          <div className="left">
             <HotRecommend />
             <SongsItems />
-            Left
+            <Newalbum />
           </div>
-          <div className='right'>Right</div>
-      </div>
-    </RecommendWrapper>
-
+          <div className="right">Right</div>
+        </div>
+      </RecommendWrapper>
     </>
   );
 };

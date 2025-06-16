@@ -1,5 +1,4 @@
-import styled from "styled-components";
-
+import styled from 'styled-components';
 
 export const MenuItemsWrapper = styled.div`
   display: grid;
@@ -13,7 +12,7 @@ export const MenuItemsWrapper = styled.div`
       color: #333;
 
       &:hover {
-        text-decoration: underline;  // 直接使用文本下划线
+        text-decoration: underline; // 直接使用文本下划线
         color: #666;
       }
 
@@ -24,4 +23,4 @@ export const MenuItemsWrapper = styled.div`
       }
     }
   }
-`
+`;

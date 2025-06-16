@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 import wrapBg1 from '@/assets/img/wrap-bg1.jpg';
 
 export const RecommendWrapper = styled.div`

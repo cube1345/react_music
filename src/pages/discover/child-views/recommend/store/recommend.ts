@@ -12,13 +12,12 @@ export const fetchBannerDataAction = createAsyncThunk(
 
 export const fetchHotRecommendAction = createAsyncThunk(
   'hotRecommend',
-  async (arg , {dispatch}) => {
-    const res = await getHotRecommend(8)
-    dispatch(changeHotRecommendAction(res.result))
+  async (arg, { dispatch }) => {
+    const res = await getHotRecommend(8);
+    dispatch(changeHotRecommendAction(res.result));
     // console.log(res);
-
   }
-)
+);
 
 interface IRecommendState {
   banners: any[];
@@ -27,22 +26,21 @@ interface IRecommendState {
 
 const initialState: IRecommendState = {
   banners: [],
-  hotRecommend: []
+  hotRecommend: [],
 };
 
 const recommendSlice = createSlice({
   name: 'recommend',
   initialState,
   reducers: {
-    changeHotRecommendAction(state,{ payload }) {
-      state.banners = payload
-    }
-
+    changeHotRecommendAction(state, { payload }) {
+      state.banners = payload;
+    },
   },
   extraReducers: builder => {
     builder
       .addCase(fetchBannerDataAction.pending, () => {
-        console.log("pending");
+        console.log('pending');
       })
       .addCase(fetchBannerDataAction.fulfilled, () => {
         // state.banners = payload;
@@ -53,5 +51,5 @@ const recommendSlice = createSlice({
   },
 });
 
-export const {changeHotRecommendAction} = recommendSlice.actions
+export const { changeHotRecommendAction } = recommendSlice.actions;
 export default recommendSlice.reducer;
