@@ -1,53 +1,88 @@
 import styled from 'styled-components';
 
 export const AlbumWrapper = styled.div`
-  /* 内容区整体容器 */
-  .content {
-    position: relative; /* 为箭头绝对定位提供参考 */
-    display: flex;      /* Flex 布局让子元素对齐 */
-    align-items: center;/* 垂直居中 */
-    height: 200px;
-    margin-top: 10px;
-    background-color: #f5f5f5;
-    padding: 0 10px;    /* 左右留空隙，避免箭头贴边 */
+  width: 100%;
+  background: #f5f5f5;
+  padding: 20px 0;
+`;
 
-    /* 解决轮播区域溢出问题 */
-    overflow: hidden;
+export const Content = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const Banner = styled.div`
+  width: 600px;
+  .ant-carousel .slick-slide {
+    display: flex;
+    justify-content: center;
   }
+`;
 
+export const AlbumGroup = styled.div`
+  display: flex !important;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+`;
 
-  .arrow-left,
-  .arrow-right {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 30px;
-    height: 70px;
-    border: none;
-    border-radius: 4px;
-    background-color: rgba(0,0,0,0.3);
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.2s ease;
+export const AlbumItem = styled.div`
+  width: 100px;
+  margin: 0 8px;
+  text-align: center;
+`;
 
+export const AlbumCover = styled.div`
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+`;
 
+export const AlbumName = styled.div`
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: bold;
+  a {
+    color: #222;
+    text-decoration: none;
     &:hover {
-      background-color: rgba(0,0,0,0.5);
+      text-decoration: underline;
+      color: #c20c0c;
     }
   }
+`;
 
-
-  .arrow-left {
-    left: 10px;
+export const SingerName = styled.div`
+  font-size: 12px;
+  color: #666;
+  a {
+    color: #666;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      color: #c20c0c;
+    }
   }
+`;
 
-  .arrow-right {
-    right: 10px;
-  }
-
-  .banner {
-    flex: 1;
-    margin: 0 10px;
+export const CarouselButton = styled.button`
+  width: 28px;
+  height: 60px;
+  border: none;
+  background: #c20c0c;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 10px;
+  &:hover {
+    background: #a31616;
   }
 `;

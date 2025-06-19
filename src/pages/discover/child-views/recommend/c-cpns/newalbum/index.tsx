@@ -1,52 +1,90 @@
-import AreaHeaderV1 from '@/components/area-header-v1';
-import React, { memo, useRef } from 'react';
-import type { FC, ReactNode } from 'react';
-import { AlbumWrapper } from './style';
-import { Carousel } from 'antd';
 import type { CarouselRef } from 'antd/es/carousel';
-import AlbumData from '@/assets/data/new_album.json'
+import React, { type ReactNode, useRef, type FC, memo } from 'react';
+import {
+  AlbumWrapper,
+  Content,
+  Banner,
+  AlbumGroup,
+  AlbumItem,
+  AlbumCover,
+  AlbumName,
+  SingerName,
+  CarouselButton
+} from './style';
+import AreaHeaderV1 from '@/components/area-header-v1';
+import { Carousel } from 'antd';
+import albumData from '@/assets/data/new_album.json';
 
 interface DownloadProps {
   children?: ReactNode;
 }
+
 const NewAlbum: FC<DownloadProps> = () => {
+  const bannerRef = useRef<CarouselRef>(null);
 
-  const bannerRef = useRef<CarouselRef>(null)
+  const handlePreClick = () => {
+    bannerRef.current?.prev();
+  };
 
-  function handlePreClick(){
-    bannerRef.current?.prev()
-  }
-  function handleNextClick(){
-    bannerRef.current?.next()
-  }
+  const handleNextClick = () => {
+    bannerRef.current?.next();
+  };
 
   return (
-    <>
-      <AlbumWrapper>
-        <AreaHeaderV1 title="新碟上架" moreLink="/discover/album" />
-        <div className="content">
-          <button className='arrow-left' onClick={handlePreClick}>&lt;</button>
-          <div className="banner">
-            <Carousel ref={bannerRef} dots={false} speed={1000}>
-              {AlbumData.map(item => (
-                <div key={item.key} className="album-item">
-                    <div className="album-image-wrapper">
-                      <img
-                        className="newalbum-image"
-                        src={item.url}
-                        alt={item.name}
-                      />
-                    </div>
-                    <link className="name-link">{item.namelink}</link>
-                    <link className="singer-link">{item.singerlink}</link>
-                </div>
+    <AlbumWrapper>
+      <AreaHeaderV1 title="新碟上架" moreLink="/discover/album" />
+      <Content>
+        <CarouselButton className="arrow-left" onClick={handlePreClick}>
+          &lt;
+        </CarouselButton>
+        <Banner>
+          <Carousel ref={bannerRef} dots={false} speed={1000}>
+            <AlbumGroup>
+              {albumData.slice(0, 5).map((item) => (
+                <AlbumItem key={item.key}>
+                  <AlbumCover>
+                    <img src={item.url} alt={item.name} />
+                  </AlbumCover>
+                  <AlbumName>
+                    <a href={item.namelink} target="_blank" rel="noopener noreferrer">
+                      {item.name}
+                    </a>
+                  </AlbumName>
+                  <SingerName>
+                    <a href={item.singerlink} target="_blank" rel="noopener noreferrer">
+                      {item.singer}
+                    </a>
+                  </SingerName>
+                </AlbumItem>
               ))}
-            </Carousel>
-          </div>
-          <button className='arrow-right' onClick={handleNextClick}>&gt;</button>
-        </div>
-      </AlbumWrapper>
-    </>
+            </AlbumGroup>
+            <AlbumGroup>
+              {albumData.slice(5, 10).map((item) => (
+                <AlbumItem key={item.key}>
+                  <AlbumCover>
+                    <img src={item.url} alt={item.name} />
+                  </AlbumCover>
+                  <AlbumName>
+                    <a href={item.namelink} target="_blank" rel="noopener noreferrer">
+                      {item.name}
+                    </a>
+                  </AlbumName>
+                  <SingerName>
+                    <a href={item.singerlink} target="_blank" rel="noopener noreferrer">
+                      {item.singer}
+                    </a>
+                  </SingerName>
+                </AlbumItem>
+              ))}
+            </AlbumGroup>
+          </Carousel>
+        </Banner>
+        <CarouselButton className="arrow-right" onClick={handleNextClick}>
+          &gt;
+        </CarouselButton>
+      </Content>
+    </AlbumWrapper>
   );
 };
+
 export default memo(NewAlbum);
