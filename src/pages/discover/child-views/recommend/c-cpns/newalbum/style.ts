@@ -76,13 +76,11 @@ export const CarouselButton = styled.button`
   width: 28px;
   height: 60px;
   border: none;
-  background: #c20c0c;
-  color: #fff;
+  background-color: #f5f5f5;
+
   font-size: 18px;
   border-radius: 4px;
   cursor: pointer;
   margin: 0 10px;
-  &:hover {
-    background: #a31616;
-  }
+
 `;

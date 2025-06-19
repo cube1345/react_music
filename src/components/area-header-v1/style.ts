@@ -51,13 +51,13 @@ export const HeaderV1Wrapper = styled.div`
     padding-left: 100px;
 
     .more {
+      margin-left: 200px;
       margin-right: 2px;
     }
 
     .icon {
-      display: inline-block;
       width: 12px;
-      height: 12px;
+      height: 12px; 
       background-position: 0 -240px;
     }
   }
