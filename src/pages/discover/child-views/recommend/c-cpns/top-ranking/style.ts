@@ -17,7 +17,7 @@ export const RankingTitle = styled.div`
   position: absolute;
   left: 120px;
   top: 20px;
-  
+
   h3 {
     font-size: 16px;
     color: #333;
@@ -28,7 +28,7 @@ export const RankingTitle = styled.div`
 export const RankingImgWrapper = styled.div`
   width: 230px;
   overflow: hidden;
-  
+
 
   img {
     width: 80px;
@@ -49,19 +49,37 @@ export const ImgContainer = styled.div`
 
 export const IconWrapper = styled.div`
   position: absolute;
-  left: 120px; 
+  left: 120px;
   display: flex;
-  gap: 10px; 
-  
+  gap: 10px;
+
   svg {
     font-size: 24px;
     color: #b5b5b5;
     cursor: pointer;
     transition: all 0.3s;
-    
+
     &:hover {
       color: #666666;
-      transform: scale(1.1); 
+      transform: scale(1.1);
     }
   }
+`;
+
+export const SongList = styled.div`
+  padding: 0 20px;
+  margin-top: 10px;
+`;
+
+export const SongItem = styled.p`
+  margin-bottom: 15.6px;
+`;
+
+interface NumberSpanProps {
+  isTopThree?: boolean;
+}
+
+export const NumberSpan = styled.span<NumberSpanProps>`
+  color: ${(props) => (props.isTopThree ? 'red' : 'inherit')};
+  margin-right: 5px;
 `;

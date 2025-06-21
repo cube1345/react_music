@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { Suspense , useState } from 'react';
 import { useRoutes } from 'react-router-dom';
 import routes from '@/router';
 
@@ -8,7 +8,26 @@ import 'normalize.css';
 import AppFooter from './components/app-footer';
 import AppHeader from './components/app-header';
 
+
+import LoginModal from '@/components/login-modal';
+
+
 function App() {
+
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+
+  const openLoginModal = () => {
+    setIsLoginModalOpen(true);
+  };
+
+  const closeLoginModal = () => {
+    setIsLoginModalOpen(false);
+  };
+
+  const handleSwitchLoginMethod = () => {
+    alert('切换到账号密码登录方式');
+  };
+
   return (
     <>
       <AppHeader />
@@ -16,8 +35,14 @@ function App() {
         <div className="main">{useRoutes(routes)}</div>
       </Suspense>
       <AppFooter />
+      <LoginModal
+        isOpen={isLoginModalOpen}
+        onClose={closeLoginModal}
+        onSwitchMethod={handleSwitchLoginMethod}
+      />
     </>
   );
 }
 
 export default App;
+

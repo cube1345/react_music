@@ -13,6 +13,13 @@ interface DownloadProps {
 }
 const Recommend: FC<DownloadProps> = () => {
   const dispatch = useAppDispatch();
+
+  // Define the openLoginModal function
+  const openLoginModal = () => {
+    // TODO: Implement modal opening logic here
+    console.log('Login modal opened');
+  };
+
   useEffect(() => {
     dispatch(fetchBannerDataAction());
     dispatch(fetchHotRecommendAction());
@@ -21,7 +28,7 @@ const Recommend: FC<DownloadProps> = () => {
   return (
     <>
       <TopBanner />
-      <MainContainer />
+      <MainContainer onPlayClick={openLoginModal} />
     </>
   );
 };
