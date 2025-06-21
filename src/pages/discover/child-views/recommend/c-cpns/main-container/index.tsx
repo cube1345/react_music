@@ -5,6 +5,7 @@ import HotRecommend from '../hot-recommend';
 import SongsItems from '../songs-items';
 import Newalbum from '../newalbum';
 import TopRanking from '../top-ranking';
+import UserLogin from '../user-login';
 
 interface DownloadProps {
   children?: ReactNode;
@@ -20,7 +21,15 @@ const MainContainer: FC<DownloadProps> = () => {
             <Newalbum />
             <TopRanking />
           </div>
-          <div className="right">Right</div>
+          <div className="right">
+            <UserLogin />
+            <div className='hot-singer'>
+
+            </div>
+            <div className='hot-live'>
+              
+            </div>  
+          </div>
         </div>
       </RecommendWrapper>
     </>
