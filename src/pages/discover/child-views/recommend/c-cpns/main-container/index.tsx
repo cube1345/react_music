@@ -6,6 +6,7 @@ import SongsItems from '../songs-items';
 import Newalbum from '../newalbum';
 import TopRanking from '../top-ranking';
 import UserLogin from '../user-login';
+import HotSinger from '../hot-singer';
 
 interface DownloadProps {
   children?: ReactNode;
@@ -23,9 +24,7 @@ const MainContainer: FC<DownloadProps> = () => {
           </div>
           <div className="right">
             <UserLogin />
-            <div className='hot-singer'>
-
-            </div>
+            <HotSinger />
             <div className='hot-live'>
               
             </div>  
