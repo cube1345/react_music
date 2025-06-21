@@ -7,6 +7,7 @@ import Newalbum from '../newalbum';
 import TopRanking from '../top-ranking';
 import UserLogin from '../user-login';
 import HotSinger from '../hot-singer';
+import HotAnchor from '../hot-anchor';
 
 interface DownloadProps {
   children?: ReactNode;
@@ -25,9 +26,7 @@ const MainContainer: FC<DownloadProps> = () => {
           <div className="right">
             <UserLogin />
             <HotSinger />
-            <div className='hot-live'>
-              
-            </div>  
+            <HotAnchor />
           </div>
         </div>
       </RecommendWrapper>

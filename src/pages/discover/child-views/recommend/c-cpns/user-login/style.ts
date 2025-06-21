@@ -4,7 +4,7 @@ export const UserLoginWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 200px;
+  height: 210px;
   width: 245px;
   background: #d5d5d5;
   transform: translate(-20px , -20px);
