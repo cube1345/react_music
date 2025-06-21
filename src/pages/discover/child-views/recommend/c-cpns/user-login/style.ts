@@ -26,7 +26,7 @@ export const UserLoginWrapper = styled.div`
     font-size: 14px;
   }
 
-  a {
+  .login-button {
     margin-left: 20px;
     display: inline-block;
     width: 100%;

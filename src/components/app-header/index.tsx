@@ -31,7 +31,7 @@ const AppHeader: FC<DownloadProps> = () => {
             placeholder="Lemon（中文版） --时代少年团"
             prefix={<SearchOutlined />}
           />
-          <Button type="link">创作者中心</Button>
+          <Button type="link" >创作者中心</Button>
         </HeaderRight>
       </HeaderWrapper>
     </>
