@@ -26,7 +26,7 @@ const MainContainer: FC<DownloadProps> = ({ onPlayClick }) => {
             <TopRanking onPlayClick={onPlayClick!} />
             </div>
           <div className="right">
-            <UserLogin />
+            <UserLogin onPlayClick={onPlayClick!} />
             <HotSinger />
             <HotAnchor />
           </div>

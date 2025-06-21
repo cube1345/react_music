@@ -12,7 +12,8 @@ import {
   OtherLoginButton
 } from './style';
 
-// 登录弹窗组件
+import { GithubOutlined } from '@ant-design/icons'
+
 interface LoginModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -38,13 +39,10 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, onSwitchMethod
         </ModalHeader>
         <ModalContent>
           <QrCodeContainer>
-            <img
-              src="https://picsum.photos/200/200?random=1"
-              alt="登录二维码"
-              className="qr-code-image"
-            />
+            <GithubOutlined />
           </QrCodeContainer>
-          <HintText>使用 网易云音乐APP 扫码登录</HintText>
+            <img src='src\assets\img\GitHub.jpg'></img>
+          <HintText>快来狠狠看我的GitHub主页~</HintText>
           <ToggleButton onClick={onSwitchMethod}>
             选择其他登录模式
           </ToggleButton>

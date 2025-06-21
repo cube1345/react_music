@@ -15,7 +15,7 @@ export const UserLoginWrapper = styled.div`
     margin-bottom: 15px;
     transform: translate(4px , 0);
   }
-  
+
 
 
   .desc {
@@ -25,7 +25,7 @@ export const UserLoginWrapper = styled.div`
     transform: none;
     font-size: 14px;
   }
-  
+
   a {
     margin-left: 20px;
     display: inline-block;
@@ -39,7 +39,7 @@ export const UserLoginWrapper = styled.div`
     background: red;
     border-radius: 20px;
     font-weight: 500;
-    
+
     &:hover {
       transform: translateY(-3px);
       box-shadow: 0 6px 16px rgba(230, 62, 76, 0.4);

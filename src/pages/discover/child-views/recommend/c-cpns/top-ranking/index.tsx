@@ -61,7 +61,7 @@ const RankingData = [
 
 interface TopRankingProps {
   children?: ReactNode;
-  onPlayClick: () => void; 
+  onPlayClick: () => void;
 }
 
 const TopRanking: FC<TopRankingProps> = ({ onPlayClick }) => {
@@ -83,7 +83,7 @@ const TopRanking: FC<TopRankingProps> = ({ onPlayClick }) => {
                 </RankingTitle>
                 <IconWrapper>
                   <PlayCircleOutlined onClick={onPlayClick} />
-                  <FolderAddOutlined />
+                  <FolderAddOutlined  onClick={onPlayClick}/>
                 </IconWrapper>
               </ImgContainer>
               <SongList>

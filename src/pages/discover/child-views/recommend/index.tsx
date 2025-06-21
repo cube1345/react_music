@@ -1,5 +1,5 @@
 import { useAppDispatch } from '@/store';
-import React, { memo, useEffect } from 'react';
+import React, { memo, useEffect , useState } from 'react';
 import type { FC, ReactNode } from 'react';
 import {
   fetchBannerDataAction,
@@ -7,6 +7,8 @@ import {
 } from './store/recommend';
 import TopBanner from './c-cpns/top-banner';
 import MainContainer from './c-cpns/main-container';
+import LoginModal from '@/components/login-modal';
+
 
 interface DownloadProps {
   children?: ReactNode;
@@ -14,21 +16,39 @@ interface DownloadProps {
 const Recommend: FC<DownloadProps> = () => {
   const dispatch = useAppDispatch();
 
-  // Define the openLoginModal function
-  const openLoginModal = () => {
-    // TODO: Implement modal opening logic here
-    console.log('Login modal opened');
-  };
 
   useEffect(() => {
     dispatch(fetchBannerDataAction());
     dispatch(fetchHotRecommendAction());
   }, []);
 
+
+    const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+
+    const openLoginModal = () => {
+      setIsLoginModalOpen(true);
+    };
+
+    const closeLoginModal = () => {
+      setIsLoginModalOpen(false);
+    };
+
+    const handleSwitchLoginMethod = () => {
+      alert('切换到账号密码登录方式');
+    };
+
+
+
   return (
     <>
       <TopBanner />
       <MainContainer onPlayClick={openLoginModal} />
+
+      <LoginModal
+        isOpen={isLoginModalOpen}
+        onClose={closeLoginModal}
+        onSwitchMethod={handleSwitchLoginMethod}
+      />
     </>
   );
 };
