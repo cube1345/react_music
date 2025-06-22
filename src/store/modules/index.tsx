@@ -9,11 +9,11 @@ const counterReducer = createSlice({
   },
   reducers: {
     changeMessageAction(state, { payload }) {
-      state.message = payload; // 修改message
+      state.message = payload;
     },
   },
 });
 
-export const { changeMessageAction } = counterReducer.actions; // 导出修改函数
+export const { changeMessageAction } = counterReducer.actions;
 
 export default counterReducer.reducer;
