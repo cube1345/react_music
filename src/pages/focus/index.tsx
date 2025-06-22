@@ -1,14 +1,23 @@
-import { memo } from 'react';
-import type { FC, ReactNode } from 'react';
+import React, { useState } from 'react';
+import { BannerWrapper , LoginBtn } from './style';
+import LoginModal from '@/components/login-modal/index';
 
-interface DownloadProps {
-  children?: ReactNode;
-}
-const Focus: FC<DownloadProps> = () => {
+const Focus: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <>
-      <div>this is Focus</div>
+      <BannerWrapper>
+        <LoginBtn onClick={openModal}>立即登录</LoginBtn>
+      </BannerWrapper>
+      <LoginModal isOpen={isModalOpen} onClose={closeModal} onSwitchMethod={function (): void {
+        throw new Error('Function not implemented.');
+      } } />
     </>
   );
 };
-export default memo(Focus);
+
+export default Focus;

@@ -7,6 +7,7 @@ import 'normalize.css';
 
 import AppFooter from './components/app-footer';
 import AppHeader from './components/app-header';
+import AppPlayerbar from './pages/player/app-playerbar';
 
 
 
@@ -21,6 +22,10 @@ function App() {
         <div className="main">{useRoutes(routes)}</div>
       </Suspense>
       <AppFooter />
+
+
+      {/* 播放器 */}
+      <AppPlayerbar />
     </>
   );
 }
