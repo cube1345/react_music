@@ -29,13 +29,12 @@ export const RankingImgWrapper = styled.div`
   width: 230px;
   overflow: hidden;
 
-
   img {
     width: 80px;
     height: 80px;
   }
 
-  &:last-child{
+  &:last-child {
     width: 228px;
   }
 `;
@@ -80,6 +79,6 @@ interface NumberSpanProps {
 }
 
 export const NumberSpan = styled.span<NumberSpanProps>`
-  color: ${(props) => (props.isTopThree ? 'red' : 'inherit')};
+  color: ${props => (props.isTopThree ? 'red' : 'inherit')};
   margin-right: 5px;
 `;

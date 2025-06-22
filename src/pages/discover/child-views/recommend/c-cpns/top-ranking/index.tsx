@@ -1,6 +1,16 @@
 import React, { memo } from 'react';
 import type { FC, ReactNode } from 'react';
-import { RankingWrapper, RankingItemWrapper, RankingImgWrapper, ImgContainer, IconWrapper, RankingTitle, SongList, SongItem, NumberSpan } from './style';
+import {
+  RankingWrapper,
+  RankingItemWrapper,
+  RankingImgWrapper,
+  ImgContainer,
+  IconWrapper,
+  RankingTitle,
+  SongList,
+  SongItem,
+  NumberSpan,
+} from './style';
 import AreaHeaderV1 from '@/components/area-header-v1';
 import { PlayCircleOutlined, FolderAddOutlined } from '@ant-design/icons';
 
@@ -20,8 +30,8 @@ const RankingData = [
       '青花瓷',
       '海阔天空',
       '体面',
-      '星辰的约定'
-    ]
+      '星辰的约定',
+    ],
   },
   {
     title: '新歌榜',
@@ -37,8 +47,8 @@ const RankingData = [
       '小苹果（电音版）',
       '后来（纯享版）',
       '青花瓷（古风新编）',
-      '时光的涟漪'
-    ]
+      '时光的涟漪',
+    ],
   },
   {
     title: '原创榜',
@@ -54,9 +64,9 @@ const RankingData = [
       '海阔天空',
       '体面',
       '芒种',
-      '彩虹尽头的梦'
-    ]
-  }
+      '彩虹尽头的梦',
+    ],
+  },
 ];
 
 interface TopRankingProps {
@@ -73,23 +83,21 @@ const TopRanking: FC<TopRankingProps> = ({ onPlayClick }) => {
           {RankingData.map((item, index) => (
             <RankingImgWrapper key={index}>
               <ImgContainer>
-                <img
-                  className="ranking-img"
-                  src={item.img}
-                  alt={item.title}
-                />
+                <img className="ranking-img" src={item.img} alt={item.title} />
                 <RankingTitle>
                   <h3>{item.title}</h3>
                 </RankingTitle>
                 <IconWrapper>
                   <PlayCircleOutlined onClick={onPlayClick} />
-                  <FolderAddOutlined  onClick={onPlayClick}/>
+                  <FolderAddOutlined onClick={onPlayClick} />
                 </IconWrapper>
               </ImgContainer>
               <SongList>
                 {item.songs.map((song, songIndex) => (
                   <SongItem key={songIndex}>
-                    <NumberSpan isTopThree={songIndex < 3}>{songIndex + 1}.</NumberSpan>
+                    <NumberSpan isTopThree={songIndex < 3}>
+                      {songIndex + 1}.
+                    </NumberSpan>
                     {song}
                   </SongItem>
                 ))}

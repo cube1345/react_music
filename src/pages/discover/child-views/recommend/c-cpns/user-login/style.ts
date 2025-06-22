@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const UserLoginWrapper = styled.div`
   display: flex;
@@ -7,16 +7,14 @@ export const UserLoginWrapper = styled.div`
   height: 210px;
   width: 245px;
   background: #d5d5d5;
-  transform: translate(-20px , -20px);
+  transform: translate(-20px, -20px);
 
   .buy-VIP {
     width: 250px;
     height: auto;
     margin-bottom: 15px;
-    transform: translate(4px , 0);
+    transform: translate(4px, 0);
   }
-
-
 
   .desc {
     line-height: 1.5;

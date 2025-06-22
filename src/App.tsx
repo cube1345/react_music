@@ -9,12 +9,7 @@ import AppFooter from './components/app-footer';
 import AppHeader from './components/app-header';
 import AppPlayerbar from './pages/player/app-playerbar';
 
-
-
 function App() {
-
-
-
   return (
     <>
       <AppHeader />
@@ -23,7 +18,6 @@ function App() {
       </Suspense>
       <AppFooter />
 
-
       {/* 播放器 */}
       <AppPlayerbar />
     </>
@@ -31,4 +25,3 @@ function App() {
 }
 
 export default App;
-

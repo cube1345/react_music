@@ -4,7 +4,7 @@ export const HotAnchorWrapper = styled.div`
   width: 100%;
   padding: 20px;
   box-sizing: border-box;
-  transform: translate(-20px , 0);
+  transform: translate(-20px, 0);
 `;
 
 export const AnchorList = styled.ul`

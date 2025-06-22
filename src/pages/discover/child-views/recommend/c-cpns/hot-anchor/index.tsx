@@ -1,8 +1,13 @@
 import React, { memo } from 'react';
 import type { FC, ReactNode } from 'react';
-import { HotAnchorWrapper, AnchorList, AnchorItem, AnchorImg, AnchorInfo } from './style';
-import AreaHeaderV2 from '@/components/area-header-v2'; 
-
+import {
+  HotAnchorWrapper,
+  AnchorList,
+  AnchorItem,
+  AnchorImg,
+  AnchorInfo,
+} from './style';
+import AreaHeaderV2 from '@/components/area-header-v2';
 
 const anchorListData = [
   {
@@ -32,7 +37,7 @@ const anchorListData = [
   {
     id: 5,
     name: '银临Rachel',
-    desc: '', 
+    desc: '',
     imgUrl: '/src/assets/img/anchor5.jpg',
   },
 ];
@@ -46,7 +51,7 @@ const HotAnchor: FC<HotAnchorProps> = () => {
     <HotAnchorWrapper>
       <AreaHeaderV2 title="热门主播" />
       <AnchorList>
-        {anchorListData.map((item) => (
+        {anchorListData.map(item => (
           <AnchorItem key={item.id}>
             <AnchorImg src={item.imgUrl} alt={item.name} />
             <AnchorInfo>

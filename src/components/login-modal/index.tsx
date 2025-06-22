@@ -9,10 +9,10 @@ import {
   HintText,
   ToggleButton,
   Footer,
-  OtherLoginButton
+  OtherLoginButton,
 } from './style';
 
-import { GithubOutlined } from '@ant-design/icons'
+import { GithubOutlined } from '@ant-design/icons';
 
 interface LoginModalProps {
   isOpen: boolean;
@@ -20,11 +20,16 @@ interface LoginModalProps {
   onSwitchMethod: () => void;
 }
 
-const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, onSwitchMethod }) => {
+const LoginModal: React.FC<LoginModalProps> = ({
+  isOpen,
+  onClose,
+  onSwitchMethod,
+}) => {
   if (!isOpen) return null;
 
-
-  const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+  const handleOverlayClick = (
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
     if (e.target === e.currentTarget) {
       onClose();
     }
@@ -41,11 +46,9 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, onSwitchMethod
           <QrCodeContainer>
             <GithubOutlined />
           </QrCodeContainer>
-            <img src='src\assets\img\GitHub.jpg'></img>
+          <img src="src\assets\img\GitHub.jpg"></img>
           <HintText>快来狠狠看我的GitHub主页~</HintText>
-          <ToggleButton onClick={onSwitchMethod}>
-            选择其他登录模式
-          </ToggleButton>
+          <ToggleButton onClick={onSwitchMethod}>选择其他登录模式</ToggleButton>
         </ModalContent>
         <Footer>
           <OtherLoginButton onClick={onSwitchMethod}>

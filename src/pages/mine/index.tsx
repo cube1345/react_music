@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BannerWrapper , LoginBtn } from './style';
+import { BannerWrapper, LoginBtn } from './style';
 import LoginModal from '@/components/login-modal/index';
 
 const LoginBanner: React.FC = () => {
@@ -13,9 +13,13 @@ const LoginBanner: React.FC = () => {
       <BannerWrapper>
         <LoginBtn onClick={openModal}>立即登录</LoginBtn>
       </BannerWrapper>
-      <LoginModal isOpen={isModalOpen} onClose={closeModal} onSwitchMethod={function (): void {
-        throw new Error('Function not implemented.');
-      } } />
+      <LoginModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        onSwitchMethod={function (): void {
+          throw new Error('Function not implemented.');
+        }}
+      />
     </>
   );
 };

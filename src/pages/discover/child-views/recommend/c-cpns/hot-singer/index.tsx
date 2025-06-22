@@ -1,6 +1,12 @@
 import React, { memo } from 'react';
 import type { FC, ReactNode } from 'react';
-import { HotSingerWrapper, SingerList, SingerItem, SingerImg, SingerInfo } from './style';
+import {
+  HotSingerWrapper,
+  SingerList,
+  SingerItem,
+  SingerImg,
+  SingerInfo,
+} from './style';
 import AreaHeaderV2 from '@/components/area-header-v2';
 
 const singerListData = [
@@ -8,7 +14,7 @@ const singerListData = [
     id: 1,
     name: '张惠妹aMEI',
     desc: '台湾歌手张惠妹',
-    imgUrl: '/src/assets/img/singer1.jpg', 
+    imgUrl: '/src/assets/img/singer1.jpg',
   },
   {
     id: 2,
@@ -43,9 +49,13 @@ interface DownloadProps {
 const HotSinger: FC<DownloadProps> = () => {
   return (
     <HotSingerWrapper>
-      <AreaHeaderV2 title="入驻歌手" moreText="查看更多" moreLink="#/discover/artist" />
+      <AreaHeaderV2
+        title="入驻歌手"
+        moreText="查看更多"
+        moreLink="#/discover/artist"
+      />
       <SingerList>
-        {singerListData.map((item) => (
+        {singerListData.map(item => (
           <SingerItem key={item.id}>
             <SingerImg src={item.imgUrl} alt={item.name} />
             <SingerInfo>

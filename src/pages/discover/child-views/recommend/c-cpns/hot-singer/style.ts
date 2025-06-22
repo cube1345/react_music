@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 
-
 export const HotSingerWrapper = styled.div`
   width: 100%;
   padding: 20px;
   box-sizing: border-box;
-  transform: translate(-20px , 0);
+  transform: translate(-20px, 0);
 `;
 
 export const SingerList = styled.ul`
@@ -16,7 +15,6 @@ export const SingerList = styled.ul`
   flex-direction: column;
   gap: 12px;
 `;
-
 
 export const SingerItem = styled.li`
   display: flex;
@@ -32,7 +30,7 @@ export const SingerItem = styled.li`
 export const SingerImg = styled.img`
   width: 60px;
   height: 60px;
-  border-radius: 4px; 
+  border-radius: 4px;
   object-fit: cover;
 `;
 

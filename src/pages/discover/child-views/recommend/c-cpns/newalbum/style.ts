@@ -82,5 +82,4 @@ export const CarouselButton = styled.button`
   border-radius: 4px;
   cursor: pointer;
   margin: 0 10px;
-
 `;

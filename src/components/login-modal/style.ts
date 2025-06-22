@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Overlay = styled.div`
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -15,7 +15,7 @@ export const ModalContainer = styled.div`
   border-radius: 12px;
   min-width: 340px;
   padding: 32px 24px 16px 24px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -3,23 +3,18 @@ import React, { memo } from 'react';
 import type { FC, ReactNode } from 'react';
 import { TopRankingItemWrapper } from './style';
 
-
 interface DownloadProps {
   children?: ReactNode;
-  itemData: any
+  itemData: any;
 }
 const TopRankingItem: FC<DownloadProps> = () => {
-
   return (
     <>
-      <TopRankingItemWrapper>
-
-      </TopRankingItemWrapper>
+      <TopRankingItemWrapper></TopRankingItemWrapper>
     </>
   );
 };
 export default memo(TopRankingItem);
-
 
 /* (
           

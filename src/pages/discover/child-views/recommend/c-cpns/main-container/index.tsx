@@ -9,7 +9,6 @@ import UserLogin from '../user-login';
 import HotSinger from '../hot-singer';
 import HotAnchor from '../hot-anchor';
 
-
 interface DownloadProps {
   children?: ReactNode;
   onPlayClick?: () => void;
@@ -19,12 +18,12 @@ const MainContainer: FC<DownloadProps> = ({ onPlayClick }) => {
     <>
       <RecommendWrapper>
         <div className="container wrap-h2">
-            <div className="left">
+          <div className="left">
             <HotRecommend />
             <SongsItems />
             <Newalbum />
             <TopRanking onPlayClick={onPlayClick!} />
-            </div>
+          </div>
           <div className="right">
             <UserLogin onPlayClick={onPlayClick!} />
             <HotSinger />

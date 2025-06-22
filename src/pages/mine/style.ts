@@ -27,7 +27,6 @@ export const LoginBtn = styled.button`
   margin-left: 677px;
   margin-top: 250px;
 
-
   &:hover {
     background-color: #66b1ff;
   }

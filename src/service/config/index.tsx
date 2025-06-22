@@ -9,12 +9,7 @@
 // console.log(import.meta.env.PROD)
 // console.log(import.meta.env.SSR)
 
-
-
 //concole.log(BASE_URL);
 
 //3.通过创建.env文件直接创建变量
 // console.log(import.meta.env.VITE_URL);
-
-
-

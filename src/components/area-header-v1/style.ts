@@ -57,7 +57,7 @@ export const HeaderV1Wrapper = styled.div`
 
     .icon {
       width: 12px;
-      height: 12px; 
+      height: 12px;
       background-position: 0 -240px;
     }
   }

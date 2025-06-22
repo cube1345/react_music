@@ -1,5 +1,5 @@
 import { useAppDispatch } from '@/store';
-import React, { memo, useEffect , useState } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import type { FC, ReactNode } from 'react';
 import {
   fetchBannerDataAction,
@@ -9,35 +9,30 @@ import TopBanner from './c-cpns/top-banner';
 import MainContainer from './c-cpns/main-container';
 import LoginModal from '@/components/login-modal';
 
-
 interface DownloadProps {
   children?: ReactNode;
 }
 const Recommend: FC<DownloadProps> = () => {
   const dispatch = useAppDispatch();
 
-
   useEffect(() => {
     dispatch(fetchBannerDataAction());
     dispatch(fetchHotRecommendAction());
   }, []);
 
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
-    const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const openLoginModal = () => {
+    setIsLoginModalOpen(true);
+  };
 
-    const openLoginModal = () => {
-      setIsLoginModalOpen(true);
-    };
+  const closeLoginModal = () => {
+    setIsLoginModalOpen(false);
+  };
 
-    const closeLoginModal = () => {
-      setIsLoginModalOpen(false);
-    };
-
-    const handleSwitchLoginMethod = () => {
-      alert('切换到账号密码登录方式');
-    };
-
-
+  const handleSwitchLoginMethod = () => {
+    alert('切换到账号密码登录方式');
+  };
 
   return (
     <>

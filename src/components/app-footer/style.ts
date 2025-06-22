@@ -3,13 +3,12 @@ import styled, { css } from 'styled-components';
 // 精灵图配置（根据实际精灵图调整）
 const SPRITE_CONFIG = {
   width: 330,
-  height: 330,     // 精灵图总高度(px)
-  iconSize: 45,    // 单个图标大小(px)
-  columns: 7,      // 每行图标数量
-  rows: 1,         // 每列图标数量
-  path: 'src/assets/img/footer-group.jpg'
+  height: 330, // 精灵图总高度(px)
+  iconSize: 45, // 单个图标大小(px)
+  columns: 7, // 每行图标数量
+  rows: 1, // 每列图标数量
+  path: 'src/assets/img/footer-group.jpg',
 };
-
 
 const iconPositions: Record<string, { x: number; y: number }> = {
   musicOpen: { x: 0, y: 3 },
@@ -25,9 +24,8 @@ const iconPositions: Record<string, { x: number; y: number }> = {
   copyright: { x: 3, y: 1 },
   investor: { x: 4, y: 1 },
   cooperation: { x: 5, y: 1 },
-  contact: { x: 6, y: 1 }
+  contact: { x: 6, y: 1 },
 };
-
 
 export const SpriteIcon = styled.span<{ iconType: keyof typeof iconPositions }>`
   display: inline-block;

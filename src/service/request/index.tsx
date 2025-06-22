@@ -24,7 +24,6 @@ class HYRequest {
         return response.data;
       },
       error => {
-
         return Promise.reject(error);
       }
     );
