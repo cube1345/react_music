@@ -19,7 +19,7 @@ const AppHeader: FC<DownloadProps> = () => {
           </a>
           <div className="content wrap-header">
             <Link to="/discover">发现</Link>
-            <Link to="/download">下载</Link>
+            <Link to="https://music.163.com/#/download">下载</Link>
             <Link to="/focus">关注</Link>
             <Link to="https://music.163.com/store/product">商城</Link>
             <Link to="https://music.163.com/st/musician">音乐人</Link>
@@ -28,7 +28,7 @@ const AppHeader: FC<DownloadProps> = () => {
         </HeaderLeft>
         <HeaderRight>
           <Input
-            placeholder="Lemon（中文版） --时代少年团"
+            placeholder="Lemon(中文版) --时代少年团"
             prefix={<SearchOutlined />}
           />
           <Button type="link" >创作者中心</Button>
