@@ -51,6 +51,10 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
     };
   }, [albumCover]);
 
+/**
+ *控制音乐的播放与暂停
+ *
+ **/
   useEffect(() => {
     if (audioRef.current) {
       if (isPlaying) {
@@ -61,12 +65,21 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
     }
   }, [isPlaying]);
 
+
+/**
+ *实时控制音乐音量
+ *
+ **/
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.volume = volume;
     }
   }, [volume]);
 
+/**
+ *控制音乐的进度
+ *参数：鼠标点击位置
+ **/
   const handleProgressClick = (e: React.MouseEvent<HTMLDivElement>) => {
     const progressBar = e.currentTarget;
     const clickPosition = e.clientX - progressBar.getBoundingClientRect().left;
@@ -77,6 +90,11 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
     }
   };
 
+
+/**
+ *显示并实时更新当前时间
+
+ **/
   const formatTime = (timeInSeconds: number) => {
     const minutes = Math.floor(timeInSeconds / 60);
     const seconds = Math.floor(timeInSeconds % 60);

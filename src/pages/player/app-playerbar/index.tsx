@@ -56,22 +56,51 @@ const AppPlayBar: React.FC = () => {
     };
   }, []);
 
+/**
+ *函数名：播放停止 
+ * 参数：无
+ * 
+ **/
+
   const handlePlayPause = () => {
     setIsPlaying(!isPlaying);
   };
 
+/**
+ *函数名：播放上一首
+ * 参数：无
+ * 
+ **/
   const handlePrevious = () => {
     console.log('Previous song');
   };
+
+/**
+ *函数名：播放下一首
+ * 参数：无
+ * 
+ **/
 
   const handleNext = () => {
     console.log('Next song');
   };
 
+/**
+ *函数名：播放音量
+ * 参数：新声音
+ * 
+ **/
+
   const handleVolumeChange = (newVolume: number) => {
     setVolume(newVolume);
     console.log('Volume changed to:', newVolume);
   };
+
+/**
+ *函数名：播放进度
+ * 参数：新进度
+ * 
+ **/
 
   const handleSeek = (position: number) => {
     setCurrentTime(position);
