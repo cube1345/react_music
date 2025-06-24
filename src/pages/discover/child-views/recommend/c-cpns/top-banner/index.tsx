@@ -70,7 +70,7 @@ const TopBanner: FC<DownloadProps> = () => {
             <div className="img-container">
               <img
                 src="src\assets\img\top-right-img.jpg"
-                alt="密码的我图呢？"
+                alt="图呢？"
               ></img>
               <div className="img-text">时代少年团，我们喜欢你~</div>
             </div>

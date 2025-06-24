@@ -14,7 +14,6 @@ import {
 import AreaHeaderV1 from '@/components/area-header-v1';
 import { PlayCircleOutlined, FolderAddOutlined } from '@ant-design/icons';
 
-// 为每个榜单添加歌曲数据
 const RankingData = [
   {
     title: '飙升榜',
