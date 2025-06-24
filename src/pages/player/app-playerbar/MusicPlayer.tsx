@@ -1,6 +1,11 @@
-import React, { useRef, useEffect } from'react';
+import React, { useRef, useEffect } from 'react';
 import { PlayerContainer, ProgressBar, SongInfo, Controls } from './style';
-import { PauseCircleFilled, PlayCircleFilled, StepBackwardFilled,  StepForwardOutlined } from '@ant-design/icons';
+import {
+  PauseCircleFilled,
+  PlayCircleFilled,
+  StepBackwardFilled,
+  StepForwardOutlined,
+} from '@ant-design/icons';
 
 interface MusicPlayerProps {
   songTitle: string;
@@ -31,7 +36,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
   onVolumeChange,
   onSeek,
   volume,
-  isVisible
+  isVisible,
 }) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const progressPercent = (currentTime / duration) * 100;
@@ -44,13 +49,12 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
         audioRef.current.pause();
       }
     };
-
   }, [albumCover]);
 
   useEffect(() => {
     if (audioRef.current) {
       if (isPlaying) {
-        audioRef.current.play().catch((err) => console.error('播放错误:', err));
+        audioRef.current.play().catch(err => console.error('播放错误:', err));
       } else {
         audioRef.current.pause();
       }
@@ -80,9 +84,14 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
   };
 
   return (
-    <PlayerContainer style={{ bottom: isVisible? '0' : '-80px', transition: 'bottom 0.3s ease' }}>
+    <PlayerContainer
+      style={{
+        bottom: isVisible ? '0' : '-80px',
+        transition: 'bottom 0.3s ease',
+      }}
+    >
       <SongInfo>
-        <img src= 'src/assets/img/music-cover.jpg' alt="Album Cover" />
+        <img src="src/assets/img/music-cover.jpg" alt="Album Cover" />
         <div>
           <h4>{songTitle}</h4>
           <p>{artist}</p>
@@ -94,11 +103,11 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
           <span>{formatTime(currentTime)}</span>
           <span>{formatTime(duration)}</span>
         </div>
-        <div
-          className="progress-track"
-          onClick={handleProgressClick}
-        >
-          <div className="progress-fill" style={{ width: `${progressPercent}%` }} />
+        <div className="progress-track" onClick={handleProgressClick}>
+          <div
+            className="progress-fill"
+            style={{ width: `${progressPercent}%` }}
+          />
           <div className="progress-handle" />
         </div>
       </ProgressBar>
@@ -111,17 +120,17 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
             max="1"
             step="0.01"
             value={volume}
-            onChange={(e) => onVolumeChange(parseFloat(e.target.value))}
+            onChange={e => onVolumeChange(parseFloat(e.target.value))}
           />
         </div>
         <div className="play-controls">
           <StepBackwardFilled onClick={onPrevious} />
           {isPlaying ? (
-            <PauseCircleFilled  onClick={onPlayPause} />
+            <PauseCircleFilled onClick={onPlayPause} />
           ) : (
             <PlayCircleFilled onClick={onPlayPause} />
           )}
-            <StepForwardOutlined onClick={onNext} />
+          <StepForwardOutlined onClick={onNext} />
         </div>
       </Controls>
     </PlayerContainer>

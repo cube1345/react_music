@@ -84,7 +84,6 @@ export const FooterWrapper = styled.footer`
   }
 `;
 
-
 export const LinkGroup = styled.div`
   display: flex;
   justify-content: center;

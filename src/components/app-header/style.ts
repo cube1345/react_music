@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 export const HeaderWrapper = styled.div`
   height: 60px;
   background-color: #333333;
@@ -32,7 +31,6 @@ export const HeaderLeft = styled.div`
     align-items: center;
     height: 100%;
 
-
     a {
       color: #cccccc;
       text-decoration: none;
@@ -55,7 +53,7 @@ export const HeaderRight = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-right: 20px; 
+  padding-right: 20px;
 
   .ant-input-affix-wrapper {
     border-radius: 16px;
