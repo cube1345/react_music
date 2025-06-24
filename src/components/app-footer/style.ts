@@ -1,12 +1,11 @@
 import styled, { css } from 'styled-components';
 
-// 精灵图配置（根据实际精灵图调整）
 const SPRITE_CONFIG = {
   width: 330,
-  height: 330, // 精灵图总高度(px)
-  iconSize: 45, // 单个图标大小(px)
-  columns: 7, // 每行图标数量
-  rows: 1, // 每列图标数量
+  height: 330,
+  iconSize: 45,
+  columns: 7,
+  rows: 1,
   path: 'src/assets/img/footer-group.jpg',
 };
 
@@ -52,14 +51,12 @@ export const SpriteIcon = styled.span<{ iconType: keyof typeof iconPositions }>`
   }
 `;
 
-// 链接文本组件
 export const LinkText = styled.span`
   color: #666;
   font-size: 14px;
   transition: color 0.2s;
 `;
 
-// 图标链接组件
 export const IconLink = styled.div`
   display: flex;
   align-items: center;
@@ -75,7 +72,6 @@ export const IconLink = styled.div`
   }
 `;
 
-// 页脚容器
 export const FooterWrapper = styled.footer`
   text-align: center;
   padding: 30px 15px;
@@ -88,7 +84,7 @@ export const FooterWrapper = styled.footer`
   }
 `;
 
-// 链接组
+
 export const LinkGroup = styled.div`
   display: flex;
   justify-content: center;

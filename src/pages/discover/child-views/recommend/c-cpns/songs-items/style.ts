@@ -12,7 +12,7 @@ export const MenuItemsWrapper = styled.div`
       color: #333;
 
       &:hover {
-        text-decoration: underline; // 直接使用文本下划线
+        text-decoration: underline;
         color: #666;
       }
 

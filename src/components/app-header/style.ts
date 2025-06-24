@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-/* 顶部栏 */
+
 export const HeaderWrapper = styled.div`
   height: 60px;
   background-color: #333333;
@@ -9,7 +9,6 @@ export const HeaderWrapper = styled.div`
   padding-right: 20px;
 `;
 
-/* 顶部栏左半部导航以及logo */
 export const HeaderLeft = styled.div`
   display: flex;
 
@@ -33,7 +32,7 @@ export const HeaderLeft = styled.div`
     align-items: center;
     height: 100%;
 
-    /* React的link标签会被渲染成HTML的a标签 */
+
     a {
       color: #cccccc;
       text-decoration: none;
@@ -52,12 +51,11 @@ export const HeaderLeft = styled.div`
   }
 `;
 
-/* 顶部栏右半部分搜索框 */
 export const HeaderRight = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-right: 20px; // 修改右边距为20px
+  padding-right: 20px; 
 
   .ant-input-affix-wrapper {
     border-radius: 16px;

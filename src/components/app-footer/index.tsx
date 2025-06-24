@@ -11,7 +11,6 @@ import {
 const Footer: React.FC = () => {
   return (
     <FooterWrapper>
-      {/* 第一行图标链接 */}
       <LinkGroup>
         <IconLink>
           <LinkText>音乐开放平台</LinkText>

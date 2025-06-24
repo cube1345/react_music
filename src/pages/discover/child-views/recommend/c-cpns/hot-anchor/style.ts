@@ -13,7 +13,7 @@ export const AnchorList = styled.ul`
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 16px; // 每个主播项间距
+  gap: 16px;
 `;
 
 export const AnchorItem = styled.li`
@@ -31,7 +31,7 @@ export const AnchorItem = styled.li`
 export const AnchorImg = styled.img`
   width: 60px;
   height: 60px;
-  border-radius: 4px; // 可选：让头像圆角
+  border-radius: 4px;
   object-fit: cover;
 `;
 
